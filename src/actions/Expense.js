@@ -1,4 +1,4 @@
-import { ADD_EXPENSE, FETCH_EXPENSE, SET_LOADER, SET_SUCCESS, SET_ERROR } from '../actionTypes';
+import { FETCH_EXPENSE, SET_LOADER, SET_SUCCESS, SET_ERROR } from '../actionTypes';
 import { API_URL } from '../config';
 
 export const addExpense = (payload) => {

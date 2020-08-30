@@ -8,7 +8,7 @@ function NavBar(props) {
         if(sessionStorage.getItem('userData')) {
             props.setUser(JSON.parse(sessionStorage.getItem('userData')))
         }
-    }, [])
+    }, [props])
 
 
     const logout = () => {

@@ -7,7 +7,7 @@ export default function Dashboard(props) {
         if (!sessionStorage.getItem('userData')) {
             props.history.push('/')
         }
-    }, [])
+    }, [props])
 
     return (
         <div>

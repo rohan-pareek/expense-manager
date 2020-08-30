@@ -8,7 +8,7 @@ function AddTrsactionForm(props) {
         if(props.success) {
             props.fetchExpenses(JSON.stringify({userID: props.userID}))
         }
-    }, [props.success])
+    }, [props])
 
     const [category, setCategory] = useState('')
     const [type, setType] = useState('')

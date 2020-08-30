@@ -1,4 +1,4 @@
-import { ADD_EXPENSE, FETCH_EXPENSE, SET_ERROR, SET_SUCCESS, SET_LOADER } from '../actionTypes/index';
+import { FETCH_EXPENSE, SET_ERROR, SET_SUCCESS, SET_LOADER } from '../actionTypes/index';
 
 export default (state = { expenses: [], successMessage: '', errorMessage: '', loading: false }, action) => {
     switch (action.type) {

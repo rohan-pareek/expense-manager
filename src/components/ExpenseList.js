@@ -17,7 +17,7 @@ function ExpenseList(props) {
     const fetchBalance = (amounts) => {
         let balance = 0;
         props.expenses.forEach(expense => {
-            if(expense.type == 'Income') {
+            if(expense.type === 'Income') {
                 balance += expense.amount;
             } else {
                 balance -= expense.amount;
@@ -30,7 +30,7 @@ function ExpenseList(props) {
         if (props.userID) {
             props.fetchExpenses(JSON.stringify({ userID: props.userID }));
         }
-    }, [props.userID])
+    }, [props])
     return (
         <>
             <div style={{ textAlign: "right" }}>
