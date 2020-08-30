@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+:root {
+  --primary: rgb(0, 0, 143);
+  --light: rgb(245, 244, 244);
+  --dark: rgb(22, 22, 22);
+  --success: rgb(0,255,0);
+  --error: rgb(255,0,0);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--light);
+  font-size: 14px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  background: var(--dark);
+  color: var(--light);
+  width: 100%;
+  padding: 0 !important;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 8px 50px !important;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .logo {
+  font-size: 22px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.navbar ul li:first-child {
+  border-right: 1px solid var(--light);
+}
+
+.row {
+  margin: 0 !important;
+}
+
+.login-form {
+  padding-bottom: 30px;
+}
+
+.signup-form {
+  padding-top: 15px;
+}
+
+.required {
+  color: var(--error);
 }

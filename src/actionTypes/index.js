@@ -1,0 +1,27 @@
+// user
+
+const LOGIN_USER = 'LOGIN_USER';
+const CREATE_USER = 'CREATE_USER';
+const LOGOUT_USER = 'LOGOUT_USER';
+const SET_LOADER = 'SET_LOADER';
+const SET_ERROR = 'SET_ERROR';
+const SET_SUCCESS = 'SET_SUCCESS';
+const SET_USER = 'SET_USER';
+
+// expense
+
+const ADD_EXPENSE = 'ADD_EXPENSE';
+const FETCH_EXPENSE = 'FETCH_EXPENSE';
+
+export {
+    LOGIN_USER,
+    CREATE_USER,
+    LOGOUT_USER,
+    SET_LOADER,
+    SET_ERROR,
+    SET_SUCCESS,
+    SET_USER,
+    ADD_EXPENSE,
+    FETCH_EXPENSE
+}
+
