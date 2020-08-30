@@ -10,6 +10,11 @@ import thunk from 'redux-thunk'
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
+const userData = sessionStorage.getItem('userData');
+if (userData) {
+    store.dispatch({ type: 'SET_USER', payload: JSON.parse(userData) });
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store = {store}>

@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom';
 
 function NavBar(props) {
 
-    useEffect(() => {
-        const { setUser } = props;
-        if(sessionStorage.getItem('userData')) {
-            setUser(JSON.parse(sessionStorage.getItem('userData')))
-        }
-    }, [])
+    // useEffect(() => {
+    //     if(sessionStorage.getItem('userData')) {
+    //         props.setUser(JSON.parse(sessionStorage.getItem('userData')))
+    //     }
+    // }, [props])
 
 
     const logout = () => {

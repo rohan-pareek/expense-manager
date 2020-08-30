@@ -36,7 +36,7 @@ function Signup(props) {
                     onChange={(e) => setPassword2(e.target.value)} value = {password2}
                 />
             </div>
-            <button type="submit" className="btn btn-info">{props.loading ? 'Please wait...' : 'Create'}</button>
+            <button type="submit" className="btn btn-info">Create</button>
         </form>
     )
 }

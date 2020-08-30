@@ -85,7 +85,7 @@ function AddTrsactionForm(props) {
 
                 </textarea>
             </div>
-                    <button type="submit" className="btn btn-primary" disabled = {props.loading}>{props.loading?'Please wait': 'Add'}</button>
+                    <button type="submit" className="btn btn-primary">Add</button>
         </form>
     )
 }

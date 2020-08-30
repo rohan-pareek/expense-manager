@@ -29,7 +29,7 @@ function Login(props) {
                     onChange={(e) => setPassword(e.target.value)} value = {password}
                 />
             </div>
-            <button type="submit" className="btn btn-success">{props.loading ? 'Please wait...' : 'Login'}</button>
+            <button type="submit" className="btn btn-success">Login</button>
         </form>
     )
 }
