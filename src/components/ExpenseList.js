@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { fetchExpenses } from '../actions/Expense'
 
@@ -26,11 +26,6 @@ function ExpenseList(props) {
         return balance;
     }
 
-    useEffect(() => {
-        if (props.userID) {
-            props.fetchExpenses(JSON.stringify({ userID: props.userID }));
-        }
-    }, [props])
     return (
         <>
             <div style={{ textAlign: "right" }}>

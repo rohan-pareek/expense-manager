@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { addExpense, fetchExpenses } from '../actions/Expense'
 
 function AddTrsactionForm(props) {
-
-    useEffect(() => {
-        if(props.success) {
-            props.fetchExpenses(JSON.stringify({userID: props.userID}))
-        }
-    }, [props])
 
     const [category, setCategory] = useState('')
     const [type, setType] = useState('')

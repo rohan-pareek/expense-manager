@@ -20,6 +20,10 @@ export const addExpense = (payload) => {
                 dispatch({type: SET_ERROR, payload: data.statusMessage})
             } else {
                 dispatch({type: SET_SUCCESS, payload: data.statusMessage})
+                const param = {
+                    userID: sessionStorage.getItem('userData')? JSON.parse(sessionStorage.getItem('userData')).userID: null 
+                }
+                dispatch(fetchExpenses(JSON.stringify(param)))
             }
         })
     }
