@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { fetchExpenses } from '../actions/Expense'
 
-function ExpenseList(props) {
+function ExpenseList({expenses, userID, fetchExpenses}) {
+
+    useEffect(() => {
+        console.log('use eff called')
+        const param = {
+            userID: sessionStorage.getItem('userData')? JSON.parse(sessionStorage.getItem('userData')).userID: null 
+        }
+        fetchExpenses(JSON.stringify(param))
+    }, [fetchExpenses])
 
     const formatDate = (parsedDate) => {
         const date = new Date(parsedDate).getDate();
@@ -16,7 +24,7 @@ function ExpenseList(props) {
 
     const fetchBalance = (amounts) => {
         let balance = 0;
-        props.expenses.forEach(expense => {
+        expenses.forEach(expense => {
             if(expense.type === 'Income') {
                 balance += expense.amount;
             } else {
@@ -34,10 +42,10 @@ function ExpenseList(props) {
                 : <span style = {{color: 'red', fontWeight: 'bold'}}>{fetchBalance()}</span>}
             </div>
             <ul className="list-group">
-                {props.expenses && props.expenses.length === 0 && 
+                {expenses && expenses.length === 0 && 
                  <li className="list-group-item">No transaction found</li>
                 }
-                {props.expenses && props.expenses.map(expense => (
+                {expenses && expenses.map(expense => (
 
                     <li className="list-group-item" key={expense._id}>
                         <div className="row">
